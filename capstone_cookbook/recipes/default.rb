@@ -7,7 +7,6 @@ app = search(:aws_opsworks_app).first
 app_path = "/srv/#{app['shortname']}"
 
 application app_path do
-  javascript "4"
   environment.update("PORT" => "80")
 
   git app_path do
